@@ -1,0 +1,297 @@
+body{
+    font:15px/1.5 Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+    background:#D0D3D4
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+header{
+    background: #17202A ;
+    color: white;
+    padding-top:10px;
+    min-height: 60px;
+    border-bottom: #e8491d 3px solid;
+    overflow: hidden;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+header ul{
+     margin:0;
+     padding:0;
+}
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #logo{
+    float: left;
+}
+header #logo h1{
+    margin:0;
+    margin-top:0px;
+    margin-left: 25px;
+    font-size: 35px;
+    color: white;
+}
+header #span{
+     color: orangered;
+}
+
+header nav{
+    float: right;
+    margin-right: 70px;
+    margin-top:15px;
+}
+header a:hover{
+    color:#e8491d
+}
+
+
+/*HEADER ENDS HERE  */
+
+
+/*SECTION STARTS HERE  */
+#boxes{
+    margin-top: 50px;
+   
+}
+
+#boxes .box{
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin: 0;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#boxes .box img{
+    width: 350px;
+    height: 200px;
+    margin: auto;
+}
+
+
+
+
+
+/*MEIA QUERIES  */
+
+@media(max-width: 768px){
+      
+
+    
+    header form{
+         float: none;
+        text-align: center;
+        width:100%;
+    }   
+
+    header nav, 
+    header nav li{
+        float: none;
+        text-align: center;
+        width:100%;
+        margin-top:30px;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }   
+}
+
+
+
+@media(max-width: 1115px){
+
+
+    #boxes .box{
+        /* float: none; */
+        width:90%;
+        margin-top:20px;
+         margin-right: 20px; 
+    }
+        #boxes .box img{
+            width: 80%;
+        }  
+}
+
+.slider{
+    max-width:100%;
+    
+	border:5px solid  #29a8e2;
+	margin:2px auto;
+	position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    
+}
+
+.slider .left-slide,.slider .right-slide{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  border-radius: 50%;
+  color:#ffffff;
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+ box-shadow: 0px 0px 10px black;
+ background-color: #29a8e2;
+}
+
+.slider .left-slide{
+	left: 30px;
+}
+.slider .right-slide{
+	right: 30px;
+}
+.slider .slider-items .item img{
+    width: 100%;
+    height: 440px;
+	display: block;
+    animation:zoom 1s ease;
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    
+}
+
+@keyframes zoom{
+	0%{transform: scale(2);opacity: 0}
+	50%{transform: scale(2);}
+	100%{transform: scale(1);opacity:1}
+}
+.slider .slider-items .item{
+	display: none;
+	position: relative;
+}
+.slider .slider-items .item .caption{
+position: absolute;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+background-color: rgba(0,0,0,.5);
+line-height: 60px;
+text-align: center;
+color: #ffffff;
+font-size: 30px;
+
+}
+
+.slider .slider-items .item.active{
+	display: block;
+}
+
+
+
+
+#estimators{
+    background: #fff;
+    padding: 60px 45px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  
+  h3{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #3aaf9f;
+  }
+  
+  #estimators .form .input_field{
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  #estimators .form .input_field .input{
+    width: 85%;
+    padding: 12px;
+    padding-left: 30px;
+    border: none;
+    background: #eeeeee;
+  }
+  
+  #estimators .form .btn{
+    width: 70%;
+    margin: 20px auto 0;
+    background: #3aaf9f;
+    text-align: center;
+    padding: 12px;
+    border-radius: 15px;
+  }
+  
+  #estimators .form .btn{
+    color: #fff;
+  }
+  
+  #estimators .form .input_field i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #1d2120;
+  }
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #1d2120;
+  }
+
+  ::-moz-placeholder { 
+   color: #1d2120;
+  }
+  :-ms-input-placeholder {
+    color: #1d2120;
+  }
+
+  #loading,#results{
+      display:none;
+  }
+
+  #loading{
+      width: 20%;
+      height: 20%;
+  }
+
+  footer{
+    padding:5px;
+    margin-top:20px;
+    color: white;
+    background: #17202A;
+    text-align: center;
+}
+
+#Error,.alert-danger{
+    background-color: red;
+    width: 90%;
+    height: 35px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
